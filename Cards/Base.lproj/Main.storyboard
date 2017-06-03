@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-ng-57Z">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-ng-57Z">
                                 <rect key="frame" x="52" y="52" width="512" height="512"/>
                                 <color key="backgroundColor" red="0.6226998730964467" green="0.6226998730964467" blue="0.6226998730964467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -35,7 +35,7 @@
                                 <rect key="frame" x="427" y="256" width="512" height="512"/>
                                 <color key="backgroundColor" red="0.71526015228426398" green="0.71526015228426398" blue="0.71526015228426398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-Ni-9yr">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-Ni-9yr">
                                 <rect key="frame" x="802" y="480" width="512" height="512"/>
                                 <color key="backgroundColor" red="0.85425920050761428" green="0.85425920050761428" blue="0.85425920050761428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -57,7 +57,21 @@
                             <constraint firstItem="dvn-Ni-9yr" firstAttribute="width" secondItem="dvn-Ni-9yr" secondAttribute="height" multiplier="1:1" id="sjD-db-jt5"/>
                             <constraint firstItem="dvn-Ni-9yr" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="zbD-Ix-LUc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hZS-eA-16n"/>
+                                <exclude reference="seY-QT-bFH"/>
+                                <exclude reference="qlH-hk-vhb"/>
+                                <exclude reference="4d2-VH-u3h"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="leftBoxLeftConstraint" destination="hZS-eA-16n" id="U7Q-Ye-DlW"/>
+                        <outlet property="leftBoxTopConstraint" destination="seY-QT-bFH" id="xhs-Zy-Xkm"/>
+                        <outlet property="rightBoxBottomConstraint" destination="4d2-VH-u3h" id="wy4-14-XNc"/>
+                        <outlet property="rightBoxRightConstraint" destination="qlH-hk-vhb" id="RrY-Wi-dKk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
