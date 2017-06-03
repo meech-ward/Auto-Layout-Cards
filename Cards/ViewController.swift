@@ -34,7 +34,17 @@ class ViewController: UIViewController {
     }
     
     func toggleLayout() {
-        
+        if compact {
+            NSLayoutConstraint.activate([rightBoxRightConstraint, leftBoxLeftConstraint])
+            NSLayoutConstraint.deactivate([rightBoxCenterConstraint, leftBoxCenterConstraint])
+            
+            compact = false
+        } else {
+            NSLayoutConstraint.deactivate([rightBoxRightConstraint, leftBoxLeftConstraint])
+            NSLayoutConstraint.activate([rightBoxCenterConstraint, leftBoxCenterConstraint])
+            
+            compact = true
+        }
     }
 
 }
