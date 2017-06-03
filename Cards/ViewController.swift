@@ -31,12 +31,20 @@ class ViewController: UIViewController {
 
     @IBAction func doubleTap(_ sender: Any) {
         toggleLayout()
+        
+//        UIView.animate(withDuration: 1.0) { 
+//            self.view.layoutIfNeeded()
+//        }
+        
+        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
     func toggleLayout() {
         if compact {
-            NSLayoutConstraint.activate([rightBoxRightConstraint, leftBoxLeftConstraint])
             NSLayoutConstraint.deactivate([rightBoxCenterConstraint, leftBoxCenterConstraint])
+            NSLayoutConstraint.activate([rightBoxRightConstraint, leftBoxLeftConstraint])
             
             compact = false
         } else {
@@ -45,6 +53,7 @@ class ViewController: UIViewController {
             
             compact = true
         }
+        
     }
 
 }
