@@ -24,8 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-ng-57Z">
-                                <rect key="frame" x="52" y="52" width="512" height="512"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMA-ng-57Z">
+                                <rect key="frame" x="427" y="52" width="512" height="512"/>
                                 <color key="backgroundColor" red="0.6226998730964467" green="0.6226998730964467" blue="0.6226998730964467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aMA-ng-57Z" secondAttribute="height" multiplier="1:1" id="6ko-NS-dDD"/>
@@ -35,8 +35,8 @@
                                 <rect key="frame" x="427" y="256" width="512" height="512"/>
                                 <color key="backgroundColor" red="0.71526015228426398" green="0.71526015228426398" blue="0.71526015228426398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-Ni-9yr">
-                                <rect key="frame" x="802" y="480" width="512" height="512"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-Ni-9yr">
+                                <rect key="frame" x="427" y="480" width="512" height="512"/>
                                 <color key="backgroundColor" red="0.85425920050761428" green="0.85425920050761428" blue="0.85425920050761428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -49,7 +49,9 @@
                             <constraint firstItem="aMA-ng-57Z" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="NXk-ta-QXo"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="czC-WF-2qQ"/>
                             <constraint firstItem="aMA-ng-57Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="hZS-eA-16n"/>
+                            <constraint firstItem="dvn-Ni-9yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iYR-au-amU"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" priority="750" id="ifA-7f-dfL"/>
+                            <constraint firstItem="aMA-ng-57Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n7n-q1-Jhl"/>
                             <constraint firstItem="aMA-ng-57Z" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" priority="750" id="pBg-Xu-NqL"/>
                             <constraint firstItem="dvn-Ni-9yr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" priority="750" id="pgf-Fb-Kzg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dvn-Ni-9yr" secondAttribute="trailing" constant="32" id="qlH-hk-vhb"/>
@@ -60,16 +62,14 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="hZS-eA-16n"/>
-                                <exclude reference="seY-QT-bFH"/>
                                 <exclude reference="qlH-hk-vhb"/>
-                                <exclude reference="4d2-VH-u3h"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="leftBoxCenterConstraint" destination="n7n-q1-Jhl" id="4IZ-fa-iuK"/>
                         <outlet property="leftBoxLeftConstraint" destination="hZS-eA-16n" id="U7Q-Ye-DlW"/>
-                        <outlet property="leftBoxTopConstraint" destination="seY-QT-bFH" id="xhs-Zy-Xkm"/>
-                        <outlet property="rightBoxBottomConstraint" destination="4d2-VH-u3h" id="wy4-14-XNc"/>
+                        <outlet property="rightBoxCenterConstraint" destination="iYR-au-amU" id="Twc-Vl-tbD"/>
                         <outlet property="rightBoxRightConstraint" destination="qlH-hk-vhb" id="RrY-Wi-dKk"/>
                     </connections>
                 </viewController>
