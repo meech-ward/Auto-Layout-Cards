@@ -41,6 +41,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dvn-Ni-9yr" secondAttribute="bottom" constant="32" id="4d2-VH-u3h"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AKr-m0-Q4f"/>
@@ -65,6 +66,9 @@
                                 <exclude reference="qlH-hk-vhb"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HrL-8C-JnT" appends="YES" id="l2e-kh-Bsa"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="leftBoxCenterConstraint" destination="n7n-q1-Jhl" id="4IZ-fa-iuK"/>
@@ -74,6 +78,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="HrL-8C-JnT">
+                    <connections>
+                        <action selector="doubleTap:" destination="BYZ-38-t0r" id="wNH-7b-0ta"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.5234375" y="138.79941434846265"/>
         </scene>
