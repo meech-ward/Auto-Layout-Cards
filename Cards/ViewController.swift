@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,25 +30,17 @@ class ViewController: UIViewController {
 
     @IBAction func doubleTap(_ sender: Any) {
         toggleLayout()
-        
-//        UIView.animate(withDuration: 1.0) { 
-//            self.view.layoutIfNeeded()
-//        }
-        
-        UIView.animate(withDuration: 1.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
-            self.view.layoutIfNeeded()
-        }, completion: nil)
     }
     
     func toggleLayout() {
         if compact {
-            NSLayoutConstraint.deactivate([rightBoxCenterConstraint, leftBoxCenterConstraint])
-            NSLayoutConstraint.activate([rightBoxRightConstraint, leftBoxLeftConstraint])
+            NSLayoutConstraint.deactivate([self.rightBoxCenterConstraint, self.leftBoxCenterConstraint])
+            NSLayoutConstraint.activate([self.rightBoxRightConstraint, self.leftBoxLeftConstraint])
             
             compact = false
         } else {
-            NSLayoutConstraint.deactivate([rightBoxRightConstraint, leftBoxLeftConstraint])
-            NSLayoutConstraint.activate([rightBoxCenterConstraint, leftBoxCenterConstraint])
+            NSLayoutConstraint.deactivate([self.rightBoxRightConstraint, self.leftBoxLeftConstraint])
+            NSLayoutConstraint.activate([self.rightBoxCenterConstraint, self.leftBoxCenterConstraint])
             
             compact = true
         }

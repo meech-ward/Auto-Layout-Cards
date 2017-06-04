@@ -44,10 +44,12 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dvn-Ni-9yr" secondAttribute="bottom" constant="32" id="4d2-VH-u3h"/>
+                            <constraint firstItem="aMA-ng-57Z" firstAttribute="width" secondItem="9WO-CX-VCw" secondAttribute="width" id="8Oc-Kr-8VC"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AKr-m0-Q4f"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FzI-sB-18H"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="width" secondItem="9WO-CX-VCw" secondAttribute="height" multiplier="1:1" id="LNt-4m-XUM"/>
                             <constraint firstItem="aMA-ng-57Z" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="NXk-ta-QXo"/>
+                            <constraint firstItem="9WO-CX-VCw" firstAttribute="width" secondItem="dvn-Ni-9yr" secondAttribute="width" id="Vfp-Wz-Ocm"/>
                             <constraint firstItem="9WO-CX-VCw" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="czC-WF-2qQ"/>
                             <constraint firstItem="aMA-ng-57Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="hZS-eA-16n"/>
                             <constraint firstItem="dvn-Ni-9yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iYR-au-amU"/>
